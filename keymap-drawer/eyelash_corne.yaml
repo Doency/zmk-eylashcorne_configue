@@ -203,3 +203,7 @@ combos:
   k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [24, 25]
   k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [16, 17]
+  k: '&td0'
+- p: [23, 24]
+  k: '&td0'
