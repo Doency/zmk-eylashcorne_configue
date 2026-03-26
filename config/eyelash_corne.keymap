@@ -59,6 +59,16 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
+
+        BSpace1 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 15>;
+        };
+
+        BSpace2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <24 25>;
+        };
     };
 
     keymap {
