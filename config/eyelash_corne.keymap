@@ -69,6 +69,16 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <24 25>;
         };
+
+        Shift1 {
+            bindings = <&td0>;
+            key-positions = <16 17>;
+        };
+
+        Shift2 {
+            bindings = <&td0>;
+            key-positions = <23 24>;
+        };
     };
 
     keymap {
