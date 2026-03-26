@@ -79,6 +79,26 @@
             bindings = <&td0>;
             key-positions = <23 24>;
         };
+
+        Delete1 {
+            bindings = <&kp DELETE>;
+            key-positions = <14 15>;
+        };
+
+        Delete2 {
+            bindings = <&kp DELETE>;
+            key-positions = <25 26>;
+        };
+
+        Enter1 {
+            bindings = <&kp ENTER>;
+            key-positions = <23 24 25 26>;
+        };
+
+        Enter2 {
+            bindings = <&kp ENTER>;
+            key-positions = <15 16 17 14>;
+        };
     };
 
     keymap {
@@ -98,10 +118,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp PERIOD       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans           &trans           &trans                                    &trans  &trans  &trans
+&none  &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none                  &none         &none  &none           &kp UP_ARROW    &none            &none  &none
+&none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none           &none  &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none
+&none  &kp PERIOD       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none           &none         &none  &none           &none           &none            &none  &none
+                                         &none            &none            &none                                &none  &none           &none
             >;
         };
 
