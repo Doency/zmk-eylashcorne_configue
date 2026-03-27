@@ -117,22 +117,34 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&ht0 LEFT_CONTROL ESC  &kp Q  &kp W  &kp E  &kp R        &kp T                                &kp UP                &kp Y         &kp U      &kp I      &kp O    &kp P     &kp LBKT
-&kp TAB                &kp A  &kp S  &kp D  &kp F        &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H         &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LT                 &kp Z  &kp X  &kp C  &kp V        &kp B         &kp SPACE              &kp DOWN              &kp N         &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
-                                     &none  &lt 1 SPACE  &kp LEFT_GUI                                               &kp LEFT_GUI  &kp SPACE  &kp RALT
+&ht0 LEFT_CONTROL ESC  &kp Q  &kp W  &kp E  &kp R        &kp T                                  &kp UP                &kp Y           &kp U        &kp I      &kp O    &kp P     &kp LBKT
+&kp TAB                &kp A  &kp S  &kp D  &kp F        &kp G                        &kp LEFT  &kp ENTER  &kp RIGHT  &kp H           &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LT                 &kp Z  &kp X  &kp C  &kp V        &kp B           &kp SPACE              &kp DOWN              &kp N           &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
+                                     &none  &lt 1 SPACE  &lt 5 LEFT_GUI                                               &lt 5 LEFT_GUI  &lt 1 SPACE  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        layer_4 {
+        num_arrow {
             bindings = <
 &none  &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none                  &none         &none  &none           &kp UP_ARROW    &none            &none  &none
 &none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none           &none  &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none
 &none  &kp PERIOD       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none           &none         &none  &none           &none           &none            &none  &none
                                          &none            &none            &none                                &none  &none           &none
             >;
+        };
+
+        raise_layer {
+            display-name = "SYMBOL";
+            bindings = <
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                    &trans     &trans     &trans                                                                &trans     &trans     &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
@@ -142,18 +154,6 @@
 &trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
                                          &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        raise_layer {
-            display-name = "SYMBOL";
-            bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -169,6 +169,15 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &to 2   &to 3   &trans  &trans  &trans            &trans  &trans  &trans  &trans  &to 2   &to 3   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
