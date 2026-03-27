@@ -262,7 +262,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: SYMBOL, h: toggle}
   - {t: NUMBER, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Fn, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -271,7 +271,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: SYMBOL, h: toggle}
   - {t: NUMBER, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Fn, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
