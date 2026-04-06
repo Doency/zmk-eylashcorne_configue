@@ -361,7 +361,7 @@ combos:
 - p: [23, 24, 25, 26]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [15, 16, 17, 14]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  k: KP ENTER
 - p: [42, 44, 45, 47]
   k: {t: '5', h: toggle}
 - p: [17, 14]
