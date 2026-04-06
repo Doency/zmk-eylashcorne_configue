@@ -217,7 +217,7 @@
         };
 
         technic_layer {
-            bindings = <&tog 5>;
+            bindings = <&tog 6>;
             key-positions = <42 44 45 47>;
         };
 
@@ -232,7 +232,7 @@
         };
 
         Media {
-            bindings = <&tog 6>;
+            bindings = <&tog 5>;
             key-positions = <5 44 7 45>;
         };
     };
@@ -291,21 +291,21 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
+        medias {
+            bindings = <
+&none  &none           &kp C_MUTE    &kp C_VOL_DN      &kp C_VOL_UP        &none                       &none         &none           &kp C_VOL_DN  &kp C_VOL_UP      &kp C_MUTE          &none       &none
+&none  &kp C_PREVIOUS  &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_FAST_FORWARD  &kp C_NEXT           &none  &none  &none  &kp C_PREVIOUS  &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_FAST_FORWARD  &kp C_NEXT  &none
+&none  &none           &none         &none             &none               &none       &none           &none         &none           &none         &none             &none               &none       &none
+                                     &none             &none               &none                                     &none           &none         &none
+            >;
+        };
+
         layer_5 {
             bindings = <
 &bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none
 &bt BT_PRV  &none         &none         &none         &none         &bt BT_CLR             &none  &none  &none  &none            &none            &none            &none            &none            &none
 &none       &none         &none         &none         &none         &none         &none           &none         &none            &none            &none            &none            &none            &none
                                         &trans        &trans        &trans                                      &trans           &trans           &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&none  &none           &kp C_MUTE    &kp C_VOL_DN      &kp C_VOL_UP        &none                       &none         &none           &kp C_VOL_DN  &kp C_VOL_UP      &kp C_MUTE          &none       &none
-&none  &kp C_PREVIOUS  &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_FAST_FORWARD  &kp C_NEXT           &none  &none  &none  &kp C_PREVIOUS  &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_FAST_FORWARD  &kp C_NEXT  &none
-&none  &none           &none         &none             &none               &none       &none           &none         &none           &none         &none             &none               &none       &none
-                                     &none             &none               &none                                     &none           &none         &none
             >;
         };
     };
