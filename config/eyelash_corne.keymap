@@ -116,7 +116,7 @@
         };
 
         Enter2 {
-            bindings = <&kp ENTER>;
+            bindings = <&kp KP_ENTER>;
             key-positions = <15 16 17 14>;
         };
 
