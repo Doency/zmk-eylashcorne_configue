@@ -56,6 +56,102 @@
 
             tapping-term-ms = <400>;
         };
+
+        f4: f4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F4";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F4>, <&kp F10>;
+        };
+
+        f5: f5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F5";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F5>, <&kp F11>;
+        };
+
+        f6: f6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F6";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F6>, <&kp F12>;
+        };
+
+        f1: f1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F1";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F1>, <&kp F7>;
+        };
+
+        f2: f2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F2";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F2>, <&kp F8>;
+        };
+
+        f3: f3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F3";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F3>, <&kp F9>;
+        };
+
+        f7: f7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F7";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F7>, <&kp F1>;
+        };
+
+        f8: f8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F8";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F8>, <&kp F2>;
+        };
+
+        f9: f9 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F9";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F9>, <&kp F3>;
+        };
+
+        f10: f10 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F10";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F10>, <&kp F4>;
+        };
+
+        f11: f11 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F11";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F11>, <&kp F5>;
+        };
+
+        f12: f12 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F12";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F12>, <&kp F6>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -186,10 +282,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                     &none         &kp NUMBER_6  &kp N7  &kp N8  &kp N9   &kp N0   &kp MINUS
-&kp N6     &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS           &none  &none  &none  &kp GRAVE     &kp N1  &kp N2  &kp N3   &kp N4   &kp N5
-&kp F1     &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &none           &none         &kp F7        &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-                           &trans  &trans  &trans                                   &trans        &trans  &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4  &kp N5                     &none         &kp NUMBER_6  &kp N7  &kp N8     &kp N9  &kp N0  &kp MINUS
+&kp N6     &kp N7  &kp N8  &kp N9     &kp N0  &kp MINUS           &none  &none  &none  &kp GRAVE     &kp N1  &kp N2     &kp N3  &kp N4  &kp N5
+&f1        &f2     &f3     &f4        &f5     &f6        &none           &none         &f7           &f8     &f9        &f10    &f11    &f12
+                           &kp EQUAL  &trans  &trans                                   &trans        &trans  &kp EQUAL
             >;
 
             sensor-bindings = <&scroll_encoder>;
