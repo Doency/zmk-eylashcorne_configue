@@ -225,26 +225,26 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
+  - '&f1'
+  - '&f2'
+  - '&f3'
+  - '&f4'
+  - '&f5'
+  - '&f6'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&f7'
+  - '&f8'
+  - '&f9'
+  - '&f10'
+  - '&f11'
+  - '&f12'
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '=', s: +}
   '5':
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
