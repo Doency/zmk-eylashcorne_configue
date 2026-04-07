@@ -240,10 +240,10 @@ layers:
   - '&f11'
   - '&f12'
   - {t: '=', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&AltRaisedLayer'
   - {type: held}
   - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&AltRaisedLayer'
   - {t: '=', s: +}
   medias:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
