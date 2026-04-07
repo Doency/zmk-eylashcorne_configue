@@ -308,10 +308,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4  &kp N5                     &none         &kp NUMBER_6  &kp N7  &kp N8     &kp N9  &kp N0  &kp MINUS
-&kp N6     &kp N7  &kp N8  &kp N9     &kp N0  &kp MINUS           &none  &none  &none  &kp GRAVE     &kp N1  &kp N2     &kp N3  &kp N4  &kp N5
-&f1        &f2     &f3     &f4        &f5     &f6        &none           &none         &f7           &f8     &f9        &f10    &f11    &f12
-                           &kp EQUAL  &trans  &trans                                   &trans        &trans  &kp EQUAL
+&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4           &kp N5                     &none         &kp NUMBER_6  &kp N7           &kp N8     &kp N9  &kp N0  &kp MINUS
+&kp N6     &kp N7  &kp N8  &kp N9     &kp N0           &kp MINUS           &none  &none  &none  &kp GRAVE     &kp N1           &kp N2     &kp N3  &kp N4  &kp N5
+&f1        &f2     &f3     &f4        &f5              &f6        &none           &none         &f7           &f8              &f9        &f10    &f11    &f12
+                           &kp EQUAL  &AltRaisedLayer  &trans                                   &trans        &AltRaisedLayer  &kp EQUAL
             >;
         };
 
