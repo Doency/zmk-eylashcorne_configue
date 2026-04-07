@@ -217,7 +217,7 @@
         };
 
         technic_layer {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <42 44 45 47>;
         };
 
@@ -234,6 +234,20 @@
         Media {
             bindings = <&tog 5>;
             key-positions = <5 44 7 45>;
+        };
+
+        test {
+            bindings = <&new_macro>;
+            key-positions = <1 2 4 5>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -296,7 +310,16 @@
             >;
         };
 
-        layer_5 {
+        Gaming {
+            bindings = <
+&kp M  &kp TAB    &kp Q  &kp W      &kp E      &kp R                  &none         &none  &none  &kp I  &none  &none      &none
+&kp O  &kp LSHFT  &kp A  &kp S      &kp D      &kp F           &none  &none  &none  &none  &kp J  &kp K  &kp L  &kp RSHFT  &none
+&kp P  &kp LCTRL  &kp Z  &kp X      &kp C      &kp V  &none           &none         &none  &none  &none  &none  &kp RCTRL  &none
+                         &kp ENTER  &kp SPACE  &kp I                                &none  &none  &none
+            >;
+        };
+
+        technic {
             bindings = <
 &bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRI                 &rgb_ug RGB_BRD                    &none
 &bt BT_PRV  &none         &none         &none         &none         &bt BT_CLR             &none  &none  &none  &none            &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SPI                 &rgb_ug RGB_SPD                    &rgb_ug RGB_COLOR_HSB(182,100,50)
