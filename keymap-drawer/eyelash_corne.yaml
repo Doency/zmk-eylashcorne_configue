@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
-  - revers0
+  - {t: '&AltRaisedLayer RIGHT_ALT', h: revers0}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
   - {t: '$$mdi:apple-keyboard-command$$', h: SYMBOL}
   - {t: RIGHT GUI, h: SYMBOL}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
-  - revers0
+  - {t: '&AltRaisedLayer RIGHT_ALT', h: revers0}
   revers0:
   - Y
   - U
@@ -411,13 +411,15 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [15, 16, 17, 14]
   k: KP ENTER
-- p: [42, 44, 45, 47]
+- p: [42, 44]
   k: {t: technic, h: toggle}
 - p: [17, 14]
   k: '&AltRaisedLayer'
 - p: [23, 26]
   k: '&AltRaisedLayer'
-- p: [5, 44, 7, 45]
+- p: [5, 44]
   k: {t: medias, h: toggle}
-- p: [1, 2, 4, 5]
-  k: '&new_macro'
+- p: [45, 47]
+  k: {t: technic, h: toggle}
+- p: [7, 45]
+  k: {t: medias, h: toggle}
