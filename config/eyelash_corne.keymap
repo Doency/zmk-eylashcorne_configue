@@ -161,6 +161,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <500>;
         };
+
+        altraisedinverted: altraisedinverted {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTRAISEDINVERTED";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT>, <&sk RIGHT_ALT>;
+
+            tapping-term-ms = <400>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -308,10 +317,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4           &kp N5                     &none         &kp NUMBER_6  &kp N7           &kp N8     &kp N9  &kp N0  &kp MINUS
-&kp N6     &kp N7  &kp N8  &kp N9     &kp N0           &kp MINUS           &none  &none  &none  &kp GRAVE     &kp N1           &kp N2     &kp N3  &kp N4  &kp N5
-&f1        &f2     &f3     &f4        &f5              &f6        &none           &none         &f7           &f8              &f9        &f10    &f11    &f12
-                           &kp EQUAL  &AltRaisedLayer  &trans                                   &trans        &AltRaisedLayer  &kp EQUAL
+&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4              &kp N5                     &none         &kp NUMBER_6  &kp N7              &kp N8     &kp N9  &kp N0  &kp MINUS
+&kp N6     &kp N7  &kp N8  &kp N9     &kp N0              &kp MINUS           &none  &none  &none  &kp GRAVE     &kp N1              &kp N2     &kp N3  &kp N4  &kp N5
+&f1        &f2     &f3     &f4        &f5                 &f6        &none           &none         &f7           &f8                 &f9        &f10    &f11    &f12
+                           &kp EQUAL  &altraisedinverted  &trans                                   &trans        &altraisedinverted  &kp EQUAL
             >;
         };
 
