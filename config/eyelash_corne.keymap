@@ -263,6 +263,16 @@
             bindings = <&tog 5>;
             key-positions = <7 45>;
         };
+
+        gaming {
+            bindings = <&tog 6>;
+            key-positions = <0 44>;
+        };
+
+        gaming2 {
+            bindings = <&tog 6>;
+            key-positions = <45 12>;
+        };
     };
 
     macros {
