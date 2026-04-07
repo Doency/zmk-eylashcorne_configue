@@ -240,10 +240,10 @@ layers:
   - '&f11'
   - '&f12'
   - {t: '=', s: +}
-  - '&AltRaisedLayer'
+  - '&altraisedinverted'
   - {type: held}
   - {type: held alternate}
-  - '&AltRaisedLayer'
+  - '&altraisedinverted'
   - {t: '=', s: +}
   medias:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
