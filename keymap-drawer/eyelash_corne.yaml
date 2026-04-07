@@ -423,3 +423,7 @@ combos:
   k: {t: technic, h: toggle}
 - p: [7, 45]
   k: {t: medias, h: toggle}
+- p: [0, 44]
+  k: {t: Gaming, h: toggle}
+- p: [45, 12]
+  k: {t: Gaming, h: toggle}
