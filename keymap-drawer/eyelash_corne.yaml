@@ -46,7 +46,7 @@ layers:
   - {t: '&Navigation', h: revers0}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
   - $$mdi:apple-keyboard-command$$
-  - {t: Sft+Gui+Sft+Gui+F23, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:transfer$$', s: '$$mdi:minus-circle-outline$$'}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
   - {t: '&Navigation RIGHT_ALT', h: revers0}
   revers0:
@@ -317,13 +317,13 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - P
   - J
   - K
   - L
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - P
+  - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
