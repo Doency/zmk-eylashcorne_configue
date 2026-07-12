@@ -6,6 +6,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -170,6 +171,15 @@
 
             tapping-term-ms = <400>;
         };
+
+        e_to_e_hat: e_to_e_hat {
+            compatible = "zmk,behavior-tap-dance";
+            label = "E_TO_E_HAT";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp LESS_THAN>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -241,12 +251,12 @@
 
         Alt1 {
             bindings = <&AltRaisedLayer>;
-            key-positions = <17 14>;
+            key-positions = <23 26>;
         };
 
         Alt2 {
             bindings = <&AltRaisedLayer>;
-            key-positions = <23 26>;
+            key-positions = <14 17>;
         };
 
         Media {
@@ -290,37 +300,37 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&ht0 LEFT_CONTROL ESC  &kp Q  &kp W  &kp E                      &kp R        &kp T                           &none         &kp Y            &kp U        &kp I                      &kp O    &kp P     &kp LBKT
-&kp TAB                &kp A  &kp S  &kp D                      &kp F        &kp G                    &none  &none  &none  &kp H            &kp J        &kp K                      &kp L    &kp SEMI  &kp SQT
-&kp BSLH               &kp Z  &kp X  &kp C                      &kp V        &kp B           &none           &none         &kp N            &kp M        &kp COMMA                  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
-                                     &altandrevers 1 RIGHT_ALT  &lt 2 SPACE  &lt 4 LEFT_GUI                                &lt 4 RIGHT_GUI  &lt 2 SPACE  &altandrevers 1 RIGHT_ALT
+&ht0 LEFT_CONTROL ESC  &kp Q  &kp W  &kp E                      &kp R        &e_to_e_hat                     &none         &kp Y              &kp U        &kp I                      &kp O    &kp P     &kp LBKT
+&kp TAB                &kp A  &kp S  &kp D                      &kp F        &mt LEFT_ALT G           &none  &none  &none  &kp H              &kp J        &kp K                      &kp L    &kp SEMI  &kp SQT
+&mt RIGHT_ALT BSLH     &kp Z  &kp X  &kp C                      &kp V        &kp B           &none           &none         &kp N              &kp M        &kp COMMA                  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
+                                     &altandrevers 1 RIGHT_ALT  &lt 2 SPACE  &lt 4 LEFT_GUI                                &lt 4 LG(LS(F23))  &lt 2 SPACE  &altandrevers 1 RIGHT_ALT
             >;
         };
 
         revers0 {
             bindings = <
-&kp Y  &kp U  &kp I      &kp O    &kp P     &kp LBKT                  &none         &ht0 LCTRL ESC  &kp Q   &kp W   &kp E  &kp R  &kp T
-&kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp APOS           &none  &none  &none  &kp TAB         &kp A   &kp S   &kp D  &kp F  &kp G
-&kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT  &none           &none         &kp BSLH        &kp Z   &kp X   &kp C  &kp V  &kp B
-                         &trans   &trans    &trans                                  &trans          &trans  &trans
+&kp Y  &kp U  &kp I      &kp O    &kp P     &kp LBKT                           &none         &ht0 LCTRL ESC      &kp Q   &kp W   &kp E  &kp R  &e_to_e_hat
+&kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp APOS                    &none  &none  &none  &kp TAB             &kp A   &kp S   &kp D  &kp F  &mt LEFT_ALT G
+&kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT           &none           &none         &mt RIGHT_ALT BSLH  &kp Z   &kp X   &kp C  &kp V  &kp B
+                         &trans   &trans    &lt 4 LG(LS(F23))                                &lt 4 LEFT_GUI      &trans  &trans
             >;
         };
 
         num_arrow {
             bindings = <
-&none  &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none                   &none         &none     &none            &kp UP_ARROW    &none            &none          &none
-&none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none            &none  &none  &none  &kp HOME  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP    &none
-&none  &kp V            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none           &none         &kp END   &kp PRINTSCREEN  &none           &kp INSERT       &kp PAGE_DOWN  &none
-                                         &trans           &trans           &trans                                &trans    &trans           &trans
+&none            &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none                   &none         &none     &none            &kp UP_ARROW    &none            &none          &none
+&kp PRINTSCREEN  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none            &none  &none  &none  &kp HOME  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP    &none
+&none            &kp V            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none           &none         &kp END   &kp PRINTSCREEN  &none           &kp INSERT       &kp PAGE_DOWN  &none
+                                                   &trans           &trans           &trans                                &trans    &trans           &trans
             >;
         };
 
         revers-num-arrow {
             bindings = <
-&none  &none      &none            &kp UP    &none       &none                     &none         &none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK   &none
-&none  &kp PG_UP  &kp LEFT         &kp DOWN  &kp RIGHT   &kp HOME           &none  &none  &none  &none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &none
-&none  &kp PG_DN  &kp PRINTSCREEN  &none     &kp INSERT  &kp END   &none           &none         &none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp V            &none
-                                   &trans    &trans      &trans                                  &trans  &trans           &trans
+&none  &none      &none     &kp UP    &none            &none                     &none         &none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK   &none
+&none  &kp PG_UP  &kp LEFT  &kp DOWN  &kp RIGHT        &kp HOME           &none  &none  &none  &none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp PRINTSCREEN
+&none  &kp PG_DN  &kp INS   &none     &kp PRINTSCREEN  &kp END   &none           &none         &none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp V            &none
+                            &trans    &trans           &trans                                  &trans  &trans           &trans
             >;
         };
 
@@ -354,10 +364,10 @@
 
         technic {
             bindings = <
-&bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRI                 &rgb_ug RGB_BRD                    &none
-&bt BT_PRV  &none         &none         &none         &none         &bt BT_CLR                &none  &none  &none  &none            &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SPI                 &rgb_ug RGB_SPD                    &rgb_ug RGB_COLOR_HSB(182,100,50)
-&none       &none         &none         &none         &none         &rgb_ug RGB_TOG  &none           &none         &none            &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(281,100,50)  &rgb_ug RGB_COLOR_HSB(62,100,50)
-                                        &trans        &trans        &trans                                         &trans           &trans           &trans
+&bt BT_NXT    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRI                 &rgb_ug RGB_BRD                    &none
+&bt BT_PRV    &none         &none         &none         &none         &bt BT_CLR                &none  &none  &none  &none            &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SPI                 &rgb_ug RGB_SPD                    &rgb_ug RGB_COLOR_HSB(182,100,50)
+&out OUT_TOG  &none         &none         &none         &none         &rgb_ug RGB_TOG  &none           &none         &none            &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(281,100,50)  &rgb_ug RGB_COLOR_HSB(62,100,50)
+                                          &trans        &trans        &trans                                         &trans           &trans           &trans
             >;
         };
     };
