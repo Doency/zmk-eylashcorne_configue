@@ -45,8 +45,8 @@ layers:
   - {t: ']', s: '}'}
   - {t: '&AltRaisedLayer RIGHT_ALT', h: revers0}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
-  - {t: '$$mdi:apple-keyboard-command$$', h: SYMBOL}
-  - {t: Gui+Sft+F23, h: SYMBOL}
+  - $$mdi:apple-keyboard-command$$
+  - {t: Sft+F23, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
   - {t: '&AltRaisedLayer RIGHT_ALT', h: revers0}
   revers0:
@@ -94,8 +94,8 @@ layers:
   - B
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Gui+Sft+F23, h: SYMBOL}
-  - {t: '$$mdi:apple-keyboard-command$$', h: SYMBOL}
+  - {t: Sft+F23, h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   num_arrow:
@@ -239,12 +239,12 @@ layers:
   - '&f10'
   - '&f11'
   - '&f12'
-  - {t: '=', s: +, type: held alternate}
-  - '&altraisedinverted'
+  - {t: '=', s: +}
+  - {t: '&altraisedinverted', type: held}
   - {type: held}
   - {type: held alternate}
-  - '&altraisedinverted'
-  - {t: '=', s: +, type: held alternate}
+  - {t: '&altraisedinverted', type: held alternate}
+  - {t: '=', s: +}
   medias:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -427,3 +427,7 @@ combos:
   k: {t: Gaming, h: toggle}
 - p: [45, 12]
   k: {t: Gaming, h: toggle}
+- p: [43, 44]
+  k: SYMBOL
+- p: [45, 46]
+  k: SYMBOL
