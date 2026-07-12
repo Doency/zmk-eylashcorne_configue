@@ -46,7 +46,7 @@ layers:
   - {t: '&Navigation', h: revers0}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
   - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:transfer$$', s: '$$mdi:minus-circle-outline$$'}
+  - {t: '$$mdi:transfer$$', s: '$$mdi:transfer$$'}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
   - {t: '&Navigation RIGHT_ALT', h: revers0}
   revers0:
