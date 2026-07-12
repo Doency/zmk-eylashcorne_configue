@@ -203,10 +203,11 @@
         navrac: navrac {
             compatible = "zmk,behavior-mod-morph";
             label = "NAVRAC";
-            bindings = <&trans>, <&none>;
+            bindings = <&trans>, <&trans>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LALT|MOD_LGUI)>;
         };
     };
 
