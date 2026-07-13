@@ -14,12 +14,12 @@ layers:
   - O
   - P
   - {t: '[', s: '{'}
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - A
   - S
   - D
   - F
-  - {t: G, h: '$$mdi:apple-keyboard-option$$'}
+  - G
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -29,7 +29,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
+  - {t: \, s: '|'}
   - Z
   - X
   - C
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
-  - {t: '&Navigation', h: revers0}
+  - {t: '$$mdi:apple-keyboard-option$$', h: revers0}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
-  - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:transfer$$', s: '$$mdi:transfer$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-space$$', h: num_arrow}
-  - {t: '&Navigation RIGHT_ALT', h: revers0}
+  - {t: '$$mdi:apple-keyboard-option$$', h: revers0}
   revers0:
   - Y
   - U
@@ -72,7 +72,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - A
   - S
   - D
@@ -92,12 +92,12 @@ layers:
   - C
   - V
   - B
-  - {type: held}
+  - {t: '$$mdi:apple-keyboard-option$$', h: revers0, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Gui+Sft+Sft+Gui+F23, h: '$$mdi:apple-keyboard-option$$'}
-  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:apple-keyboard-option$$', h: revers0, type: held alternate}
   num_arrow:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP NUMLOCK
@@ -239,12 +239,12 @@ layers:
   - '&f10'
   - '&f11'
   - '&f12'
-  - {t: '=', s: +}
-  - '&altraisedinverted'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&altraisedinverted'
-  - {t: '=', s: +}
+  - {t: '&AltRaisedLayer', h: '='}
+  - {type: held}
+  - {type: held}
+  - {type: held alternate}
+  - {type: held alternate}
+  - {t: '&AltRaisedLayer', h: '='}
   medias:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -411,7 +411,7 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [15, 16, 17, 14]
   k: KP ENTER
-- p: [42, 44]
+- p: [33, 5, 0, 28]
   k: {t: technic, h: toggle}
 - p: [23, 26]
   k: '&AltRaisedLayer'
@@ -419,7 +419,7 @@ combos:
   k: '&AltRaisedLayer'
 - p: [5, 44]
   k: {t: medias, h: toggle}
-- p: [45, 47]
+- p: [36, 7, 12, 41]
   k: {t: technic, h: toggle}
 - p: [7, 45]
   k: {t: medias, h: toggle}
@@ -428,6 +428,6 @@ combos:
 - p: [45, 12]
   k: {t: Gaming, h: toggle}
 - p: [43, 44]
-  k: {t: SYMBOL, h: toggle}
+  k: SYMBOL
 - p: [45, 46]
-  k: {t: SYMBOL, h: toggle}
+  k: SYMBOL
