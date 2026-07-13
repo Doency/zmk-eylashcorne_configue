@@ -77,7 +77,7 @@ layers:
   - S
   - D
   - F
-  - {t: G, h: '$$mdi:apple-keyboard-option$$'}
+  - G
   - N
   - M
   - {t: ',', s: <}
@@ -86,7 +86,7 @@ layers:
   - {t: ']', s: '}'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
+  - {t: \, s: '|'}
   - Z
   - X
   - C
