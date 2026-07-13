@@ -178,7 +178,7 @@
             #binding-cells = <0>;
             bindings = <&kp T>, <&kp NON_US_BACKSLASH>;
 
-            tapping-term-ms = <160>;
+            tapping-term-ms = <200>;
         };
 
         Navigation: Navigation {
